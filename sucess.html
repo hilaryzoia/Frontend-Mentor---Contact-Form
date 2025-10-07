@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="style.css">
+    <title>Contact Us Form</title>
+    
+</head>
+<body>
+    <div class="container">
+        <form id="formulario">
+            <h1>Contact Us</h1>
+
+            <div class="name-group">
+                <div class="form-group">
+                    <label for="nome">First Name<span class="required">*</span></label>
+                    <input type="text" name="nome" id="nome">
+                    <div id="error-name" class="error-message">This field is required</div>
+                </div>
+                <div class="form-group">
+                    <label for="sobrenome">Last Name<span class="required">*</span></label>
+                    <input type="text" name="sobrenome" id="sobrenome">
+                    <div id="error-sobrenome" class="error-message">This field is required</div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address<span class="required">*</span></label>
+                <input type="email" name="email" id="email">
+                <div id="error-email" class="error-message">Please enter a valid email address</div>
+            </div>
+
+            <div class="form-group query-type-group">
+                <label>Query Type<span class="required">*</span></label>
+                <div class="query-options">
+                    <div class="query-option-wrapper">
+                        <input type="radio" name="querytype" value="generalenquiry" id="generalenquiry">
+                        <label for="generalenquiry">General Enquiry</label>
+                    </div>
+                    <div class="query-option-wrapper">
+                        <input type="radio" name="querytype" value="supportrequest" id="supportrequest">
+                        <label for="supportrequest">Support Request</label>
+                    </div>
+                </div>
+                <div id="error-querytype" class="error-message">Please select a query type</div>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Message<span class="required">*</span></label>
+                <textarea name="message" id="message"></textarea>
+                <div id="error-text" class="error-message">This field is required</div>
+            </div>
+
+            <div class="consent-group">
+                <input type="checkbox" id="checkbox" name="terms">
+                <label for="checkbox">I hereby consent to being contacted by the team<span class="required">*</span></label>
+            </div>
+            <div id="error-check" class="error-message">To submit this form, please consent to being contacted!</div>
+
+            <button type="submit">Submit</button>
+        </form>
+        
+        <div id="confirmationmessage" style="display: none">
+            <img src="./icon-success-check.svg" alt="Success">
+            <h6>Message Sent!</h6>
+            <p>Thanks for completing the form. We\'ll be in touch soon!</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
